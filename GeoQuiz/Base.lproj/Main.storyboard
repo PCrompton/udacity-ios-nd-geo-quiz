@@ -74,17 +74,29 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="HwS-z8-BCs"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaP-ER-r4V" userLabel="Horizontal SV4">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qaP-ER-r4V" userLabel="Horizontal SV4">
                                         <rect key="frame" x="0.0" y="435" width="560" height="145"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN1-aZ-z1R" userLabel="Correct Count">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="145"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="100"/>
+                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbP-OA-fAs">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="145"/>
+                                                <rect key="frame" x="187" y="0.0" width="186" height="145"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Hear Phrase"/>
                                                 <connections>
                                                     <action selector="hearPhrase:" destination="8sa-Cj-rbq" eventType="touchUpInside" id="u3W-4q-SEE"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i34-Ae-7DP" userLabel="Incorrect Count">
+                                                <rect key="frame" x="373" y="0.0" width="187" height="145"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="100"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="SvB-HA-xu2"/>
@@ -102,9 +114,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="correctCount" destination="fN1-aZ-z1R" id="o9r-Uf-axk"/>
                         <outlet property="flagButton1" destination="aRp-Fg-Tkm" id="AyN-XG-UTh"/>
                         <outlet property="flagButton2" destination="zQ3-oh-SEg" id="lVc-C5-Ihx"/>
                         <outlet property="flagButton3" destination="vCL-RX-pNW" id="lFy-LV-ciK"/>
+                        <outlet property="incorrectCount" destination="i34-Ae-7DP" id="AHS-m5-eqn"/>
                         <outlet property="repeatPhraseButton" destination="wbP-OA-fAs" id="FfI-15-EIc"/>
                     </connections>
                 </viewController>
